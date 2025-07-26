@@ -104,6 +104,15 @@ label input[type="radio"] {
   font-size: 1rem;
 }
 
+.linha-horarios button {
+  align-self: center;
+  background: transparent;
+  border: none;
+  color: #b00020;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Botão de adicionar horário */
 #adicionarHorario {
   width: 36px;
