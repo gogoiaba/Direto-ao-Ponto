@@ -69,7 +69,7 @@ document.getElementById("completarHorario").addEventListener("click", () => {
   const jornadaSelecionada = document.querySelector(
     'input[name="jornada"]:checked'
   ).value;
-  const jornadaLiquidaMinutos = jornadaSelecionada === "6" ? 345 : 480; // 5h45 ou 8h
+  const jornadaLiquidaMinutos = jornadaSelecionada === "6" ? 345 : 480; // 345=5h45, 480=8h
 
   const entradas = Array.from(
     document.querySelectorAll('input[name^="entrada"]')
