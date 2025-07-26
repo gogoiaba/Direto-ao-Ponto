@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direto ao Ponto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Direto ao Ponto</h1>
+      <h3>Seu tempo vale cada minuto</h3>
+    </div>
+
+    <div class="container form">
+      <form>
+        <!-- Fieldset para escolha da jornada -->
+        <fieldset>
+          <legend><h2>Qual sua jornada de trabalho?</h2></legend>
+          <label>
+            <input type="radio" name="jornada" value="6" checked />
+            <span>6 horas</span>
+          </label>
+          <label>
+            <input type="radio" name="jornada" value="8" />
+            <span>8 horas</span>
+          </label>
+        </fieldset>
+
+        <!-- Primeira linha com os horários -->
+        <div id="horarios">
+          <div class="linha-horarios">
+            <label>
+              Entrada
+              <input type="time" name="entrada1" />
+            </label>
+            <label>
+              Saída
+              <input type="time" name="saida1" />
+            </label>
+          </div>
+
+          <!-- Segunda linha com os horários -->
+          <div class="linha-horarios">
+            <label>
+              Entrada
+              <input type="time" name="entrada2" />
+            </label>
+            <label>
+              Saída
+              <input type="time" name="saida2" />
+            </label>
+          </div>
+
+          <!-- Aqui virão as próximaafs linhas adicionais via JS -->
+        </div>
+
+        <button id="adicionarHorario" type="button">+</button>
+      </form>
+
+      <div
+        id="mensagemIntervalo"
+        style="color: #b00020; font-size: 0.9rem; margin-top: 10px"
+      ></div>
+    </div>
+
+    <div class="acoes container">
+      <button id="completarHorario">Completar Horário</button>
+      <button id="verificarJornada">Verificar Jornada</button>
+      <button id="limparHorarios">Limpar Horários</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
