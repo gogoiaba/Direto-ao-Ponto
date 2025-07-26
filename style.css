@@ -158,6 +158,22 @@ label input[type="radio"] {
   background-color: #005fa3;
 }
 
+/* Botão de remover linha */
+.removerHorario {
+  width: 28px;
+  height: 28px;
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  align-self: center;
+  cursor: pointer;
+}
+
+.removerHorario:hover {
+  background-color: #e04848;
+}
+
 /* Responsivo para telas maiores */
 @media (min-width: 600px) {
   body {

@@ -7,16 +7,39 @@ document.getElementById("adicionarHorario").addEventListener("click", () => {
   const novaLinha = document.createElement("div");
   novaLinha.classList.add("linha-horarios");
 
-  novaLinha.innerHTML = `
-    <label>
-      Entrada
-      <input type="time" name="entrada${contadorLinhas}" />
-    </label>
-    <label>
-      Saída
-      <input type="time" name="saida${contadorLinhas}" />
-    </label>
-  `;
+  const labelEntrada = document.createElement("label");
+  labelEntrada.setAttribute("for", `entrada${contadorLinhas}`);
+  labelEntrada.textContent = "Entrada";
+
+  const inputEntrada = document.createElement("input");
+  inputEntrada.type = "time";
+  inputEntrada.name = `entrada${contadorLinhas}`;
+  inputEntrada.id = `entrada${contadorLinhas}`;
+  labelEntrada.appendChild(inputEntrada);
+
+  const labelSaida = document.createElement("label");
+  labelSaida.setAttribute("for", `saida${contadorLinhas}`);
+  labelSaida.textContent = "Saída";
+
+  const inputSaida = document.createElement("input");
+  inputSaida.type = "time";
+  inputSaida.name = `saida${contadorLinhas}`;
+  inputSaida.id = `saida${contadorLinhas}`;
+  labelSaida.appendChild(inputSaida);
+
+  const botaoRemover = document.createElement("button");
+  botaoRemover.type = "button";
+  botaoRemover.classList.add("removerHorario");
+  botaoRemover.textContent = "x";
+  botaoRemover.setAttribute("aria-label", "Remover linha de horário");
+  botaoRemover.addEventListener("click", () => {
+    novaLinha.remove();
+    contadorLinhas--;
+  });
+
+  novaLinha.appendChild(labelEntrada);
+  novaLinha.appendChild(labelSaida);
+  novaLinha.appendChild(botaoRemover);
 
   document.getElementById("horarios").appendChild(novaLinha);
 });
