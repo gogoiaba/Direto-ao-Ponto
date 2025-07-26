@@ -18,6 +18,16 @@ document.getElementById("adicionarHorario").addEventListener("click", () => {
     </label>
   `;
 
+  if (contadorLinhas > 2) {
+    const btnRemover = document.createElement("button");
+    btnRemover.type = "button";
+    btnRemover.textContent = "x";
+    btnRemover.addEventListener("click", () => {
+      novaLinha.remove();
+    });
+    novaLinha.appendChild(btnRemover);
+  }
+
   document.getElementById("horarios").appendChild(novaLinha);
 });
 
