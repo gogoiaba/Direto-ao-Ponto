@@ -30,32 +30,32 @@
         <!-- Primeira linha com os horários -->
         <div id="horarios">
           <div class="linha-horarios">
-            <label>
+            <label for="entrada1">
               Entrada
-              <input type="time" name="entrada1" />
+              <input id="entrada1" type="time" name="entrada1" />
             </label>
-            <label>
+            <label for="saida1">
               Saída
-              <input type="time" name="saida1" />
+              <input id="saida1" type="time" name="saida1" />
             </label>
           </div>
 
           <!-- Segunda linha com os horários -->
           <div class="linha-horarios">
-            <label>
+            <label for="entrada2">
               Entrada
-              <input type="time" name="entrada2" />
+              <input id="entrada2" type="time" name="entrada2" />
             </label>
-            <label>
+            <label for="saida2">
               Saída
-              <input type="time" name="saida2" />
+              <input id="saida2" type="time" name="saida2" />
             </label>
           </div>
 
           <!-- Aqui virão as próximaafs linhas adicionais via JS -->
         </div>
 
-        <button id="adicionarHorario" type="button">+</button>
+        <button id="adicionarHorario" type="button" aria-label="Adicionar linha de horário">+</button>
       </form>
 
       <div
@@ -65,9 +65,9 @@
     </div>
 
     <div class="acoes container">
-      <button id="completarHorario">Completar Horário</button>
-      <button id="verificarJornada">Verificar Jornada</button>
-      <button id="limparHorarios">Limpar Horários</button>
+      <button id="completarHorario" aria-label="Completar horário">Completar Horário</button>
+      <button id="verificarJornada" aria-label="Verificar jornada">Verificar Jornada</button>
+      <button id="limparHorarios" aria-label="Limpar horários">Limpar Horários</button>
     </div>
 
     <script src="script.js"></script>
