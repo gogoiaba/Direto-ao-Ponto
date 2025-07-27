@@ -27,19 +27,8 @@ document.getElementById("adicionarHorario").addEventListener("click", () => {
   inputSaida.id = `saida${contadorLinhas}`;
   labelSaida.appendChild(inputSaida);
 
-  const botaoRemover = document.createElement("button");
-  botaoRemover.type = "button";
-  botaoRemover.classList.add("removerHorario");
-  botaoRemover.textContent = "x";
-  botaoRemover.setAttribute("aria-label", "Remover linha de horário");
-  botaoRemover.addEventListener("click", () => {
-    novaLinha.remove();
-    contadorLinhas--;
-  });
-
   novaLinha.appendChild(labelEntrada);
   novaLinha.appendChild(labelSaida);
-  novaLinha.appendChild(botaoRemover);
 
   document.getElementById("horarios").appendChild(novaLinha);
 });
