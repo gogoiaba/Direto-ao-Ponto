@@ -24,6 +24,5 @@ and navigate to the page.
 - Implement the *Verificar Jornada* button to validate if the inserted times
   respect the required breaks.
 - Show warnings when the lunch interval is too short.
-- Allow removing specific time entry lines.
 - Persist entries locally between sessions and improve the overall look and
   responsiveness.
